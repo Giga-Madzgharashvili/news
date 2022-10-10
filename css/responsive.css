@@ -1,8 +1,13 @@
 @media(max-width: 1536px){
-    .container{
+    .container, .news-blcok, .ads-banner-large, .news-left-block, .news-right-block, .news-header{
         width: 80%;
     }
-    .ads-banner-large{
-        width: 90%;
+   
+    .news-article{
+        width: 48%;
+        height: 400px;
+    }
+    .news-article img {
+        height: 200px;
     }
 }
