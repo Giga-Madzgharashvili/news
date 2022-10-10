@@ -1,6 +1,9 @@
 export function getData(url) {
+    let method = "GET";
     return new Promise((resolve, reject) => {
-    fetch(url)
+    fetch(url, {
+        method: method
+    })
     .then(response => response.json())
     .then(returnData =>{
      if(returnData.code ===200){
