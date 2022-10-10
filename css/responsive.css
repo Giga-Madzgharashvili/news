@@ -1,0 +1,8 @@
+@media(max-width: 1536px){
+    .container{
+        width: 80%;
+    }
+    .ads-banner-large{
+        width: 90%;
+    }
+}

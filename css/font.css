@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Arial GEO';
+    src: url('../fonts/arial-geo-master/arial-geo-webfont.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/arial-geo-master/arial-geo-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/arial-geo-master/arial-geo-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/arial-geo-master/arial-geo-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../fonts/arial-geo-master/arial-geo-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/arial-geo-master/arial-geo-webfont.svg#arial_georegular') format('svg'); /* Legacy iOS */
+}
+@font-face {
+    font-family: 'BPG Arial Caps';
+    src: url('../fonts/bpg-arial-caps-master/bpg-arial-caps-webfont.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/bpg-arial-caps-master/bpg-arial-caps-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/bpg-arial-caps-master/bpg-arial-caps-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/bpg-arial-caps-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../fonts/bpg-arial-caps-master/bpg-arial-caps-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/bpg-arial-caps-master/bpg-arial-caps-webfont.svg#bpg_arial_capsregular') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Chomsky';
+    src: url('../fonts/chomsky/Chomsky.eot');
+    src: url('../fonts/chomsky/Chomsky.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/chomsky/Chomsky.woff2') format('woff2'),
+        url('../fonts/chomsky/Chomsky.woff') format('woff'),
+        url('../fonts/chomsky/Chomsky.ttf') format('truetype'),
+        url('../fonts/chomsky/Chomsky.svg#Chomsky') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/poppins/Poppins-Regular.eot');
+    src: url('../fonts/poppins/Poppins-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/poppins/Poppins-Regular.woff2') format('woff2'),
+        url('../fonts/poppins/Poppins-Regular.woff') format('woff'),
+        url('../fonts/poppins/Poppins-Regular.ttf') format('truetype'),
+        url('../fonts/poppins/Poppins-Regular.svg#Poppins-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
