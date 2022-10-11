@@ -1,4 +1,5 @@
 import { getData, errMsg } from "./module.js";
+import myJson from '../db/news.json' assert {type: 'json'};
 
 // top news section
 const topNewsLeft = document.getElementById("topLeft");
