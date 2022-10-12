@@ -1,4 +1,4 @@
-@media(max-width: 1536px){
+@media(max-width: 1600px){
     .container, .news-blcok, .ads-banner-large, .news-left-block, .news-right-block, .news-header{
         width: 90%;
     }
@@ -14,4 +14,5 @@
         max-width: 340px;
         width: 100%;
     }
+
 }
