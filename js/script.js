@@ -1,5 +1,5 @@
 import { getData, errMsg } from "./module.js";
-import myJson from '../db/news.json' assert {type: 'json'};
+import myJson from "../db/news.json" assert { type: "json" };
 
 // top news section
 const topNewsLeft = document.getElementById("topLeft");
@@ -89,3 +89,28 @@ loadMore.addEventListener("click", function () {
   currentPosts += 4;
   load();
 });
+// last news
+const lastNews = document.getElementById("lastNews");
+getData("./db/news.json")
+  .then((response) => {
+    response.data.forEach((element) => {
+      // console.log(element);
+      if (element.id > 3 && element.id < 10) {
+        const div = document.createElement("div");
+        div.classList.add("last-news-article");
+        const img = document.createElement("img");
+        img.setAttribute("src", element.image);
+        img.setAttribute("alt", "Image");
+        const h3 = document.createElement("h3");
+        h3.classList.add("news-h3");
+        h3.textContent = element.title;
+
+        div.appendChild(img);
+        div.appendChild(h3);
+        lastNews.appendChild(div);
+      }
+    });
+  })
+  .catch((err) => {
+    errMsg(err);
+  });

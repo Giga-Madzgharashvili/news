@@ -1,13 +1,17 @@
 @media(max-width: 1536px){
     .container, .news-blcok, .ads-banner-large, .news-left-block, .news-right-block, .news-header{
-        width: 80%;
+        width: 90%;
     }
    
-    .news-article{
+    .news-article {
         width: 48%;
         height: 400px;
     }
     .news-article img {
         height: 200px;
+    }
+    .last-news-article {
+        max-width: 340px;
+        width: 100%;
     }
 }
