@@ -1,5 +1,19 @@
 import { getData, errMsg } from "./module.js";
 import myJson from "../db/news.json" assert { type: "json" };
+// header stiky
+
+window.onscroll = function() {stikyHeader()};
+
+let header = document.getElementById("mineHeader");
+let sticky = header.offsetTop;
+
+function stikyHeader() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
 
 // top news section
 const topNewsLeft = document.getElementById("topLeft");
@@ -162,4 +176,13 @@ getData("./db/news.json")
 })
 .catch((err) => {
   errMsg(err);
+});
+
+
+// burger menu
+let toggleButton = document.getElementById('burger');
+let navigation = document.getElementById('nav');
+toggleButton.addEventListener('click', function() {
+  navigation.classList.toggle('nav-active');
+  toggleButton.classList.toggle('list-active');
 });
