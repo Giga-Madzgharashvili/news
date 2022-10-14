@@ -31,10 +31,10 @@
             <div class="info" id="info"></div>
             <div class="top-header">
                 <ul class="top-nav">
-                    <li><a href="#" class="top-a">შესვლა</a></li>
-                    <li><a href="#" class="top-a">რეგისტრაცია</a></li>
+                    <li><a href="login.html" class="top-a">შესვლა</a></li>
+                    <li><a href="registr.html" class="top-a">რეგისტრაცია</a></li>
                     <li><a href="#" class="top-a">კონტაქტი</a></li>
-                    <li><a href="#" class="top-a">ხ.დ.კ</a></li>
+                    <li><a href="about.html" class="top-a">ჩვენს შესახებ</a></li>
                 </ul>
                 <ul class="top-icon">
                     <li><a href="#" class="top-a"><i class="fa-brands fa-facebook-f"></i></a></li>
@@ -62,7 +62,14 @@
                         </ul>
                     </nav>
                     <div class="search-bar">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
+                        <div id="searchBar">
+                            <input type="text" class="search-input" id="searchInput" placeholder="ძიება...">
+                            <div class="close" id="close"><i class="fa-regular fa-circle-xmark"></i></div>
+                            <div class="search-result" id="searchResult">
+                                
+                            </div>
+                        </div>
                     </div>
                     <!-- burger menu -->
                     <div class="burger-menu" id="burger">
@@ -274,6 +281,8 @@
     </footer>
 
     <script type="module" src="js/slider.js"></script>
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/footer.js"></script>
     <script type="module" src="js/script.js"></script>
 </body>
 
