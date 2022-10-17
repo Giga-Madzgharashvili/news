@@ -27,9 +27,9 @@
 
         height: 100vh;
         position: absolute;
-        top: 45px;
+        top: 94px;
         left: -44px;
-        background-color: #1c1e21;
+        background-color: #0F1520;
         width: 80%;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -45,14 +45,46 @@
         -ms-flex-direction: column;
         flex-direction: column;
         padding: 80px;
+        border: none
     }
 
     .nav-ul{
         display: none;
     }
 
+    .nav-ul li{
+        margin-bottom: 15px;
+    }
+
     .search-bar{
         margin-right: 40px;
+    }
+    .header-wrapper{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .search-bar{
+        position: absolute;
+        margin: 0;
+        top: 48%;
+        right:  20px;
+    }
+    .nav-active{
+        border: none;
+    }
+
+    .footer-wrapper{
+        flex-direction: column-reverse;
+        
+        
+    }
+    .footer-left{
+        margin-top: 50px;
+        max-width: 810px;
+    }
+    .last-news-article {
+        width: 48%;
     }
 
 }

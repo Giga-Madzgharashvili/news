@@ -1,4 +1,4 @@
-export function getData(url) {
+export function getData(url, callback) {
     let method = "GET";
     return new Promise((resolve, reject) => {
     fetch(url, {

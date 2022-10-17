@@ -1,5 +1,23 @@
 {
-  "type": "module"
-    
+  "type": "module",
+  "name": "news",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "json:server": "json-server --watch ./panel/db/news.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Giga-Madzgharashvili/news.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Giga-Madzgharashvili/news/issues"
+  },
+  "homepage": "https://github.com/Giga-Madzgharashvili/news#readme",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
 }
-

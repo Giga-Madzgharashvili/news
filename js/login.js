@@ -37,10 +37,10 @@ loginFOrm.addEventListener("submit", (event) => {
 
   const saveMe = document.getElementById("saveMe");
 
-  if(saveMe.checked){
+  if (saveMe.checked) {
     Cookies.set("saveUserName", LoginUserName);
-    Cookies.set("savePassword", loginPassword)
-  } else{
+    Cookies.set("savePassword", loginPassword);
+  } else {
     Cookies.remove("saveUserName");
     Cookies.remove("loginPassword");
   }
@@ -51,12 +51,12 @@ loginFOrm.addEventListener("submit", (event) => {
 });
 
 let saveUser = Cookies.get("saveUserName");
-let savePassword = Cookies.get("savePassword")
+let savePassword = Cookies.get("savePassword");
 
-if(saveUser && savePassword){
-    document.getElementById("LoginUserName").value = saveUser;
-    document.getElementById("loginPassword").value = savePassword;
-    document.getElementById("saveMe").checked = true;
+if (saveUser && savePassword) {
+  document.getElementById("LoginUserName").value = saveUser;
+  document.getElementById("loginPassword").value = savePassword;
+  document.getElementById("saveMe").checked = true;
 }
 
 const togglrIcon = document.getElementById("togglrIcon");
@@ -75,17 +75,16 @@ togglrIcon.addEventListener("click", () => {
 
 let input = document.querySelectorAll(".users");
 input.forEach((element) => {
-    element.addEventListener("focusin", onfocusFunction);
-    element.addEventListener("focusout", offFocusFunction);
+  element.addEventListener("focusin", onfocusFunction);
+  element.addEventListener("focusout", offFocusFunction);
 
-function onfocusFunction() {
+  function onfocusFunction() {
     element.style.background = "#0d111c";
     element.style.border = "2px solid #645e5e";
-}
+  }
 
-function offFocusFunction() {
+  function offFocusFunction() {
     element.style.background = "";
     element.style.border = "";
-}
-
-})
+  }
+});
