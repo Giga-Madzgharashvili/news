@@ -40,31 +40,30 @@ searchIcon.addEventListener("click", () => {
   close.style = "display: block;";
 });
 
-close.addEventListener("click", () => {
-  search.classList.remove("search");
-  searchIcon.classList.add("fa-magnifying-glass");
-  searchInput.style = "display: none";
-  close.style = "display: none";
-});
+
 function searchPosts(){
 getData("./db/news.json")
   .then((response) => {
     response.data.forEach((element) => {
       const li = document.createElement("li");
+      li.classList.add("search-li");
       const span = document.createElement("span");
       span.textContent = element.title;
-      const img = document.createElement("img");
-      // console.log(element);
-      img.setAttribute("src", element.image);
-      img.setAttribute("alt", "image");
-      img.classList.add("search-image");
       const aTag = document.createElement("a");
       
-      aTag.appendChild(img);
+      close.addEventListener("click", () => {
+        search.classList.remove("search");
+        searchIcon.classList.add("fa-magnifying-glass");
+        searchInput.style = "display: none";
+        close.style = "display: none";
+        li.classList.remove("show");
+      });
       aTag.appendChild(span);
       li.appendChild(aTag);
       listItems.push(li);
       searchResult.appendChild(li);
+      
+    
      
     });
   })
@@ -75,13 +74,18 @@ getData("./db/news.json")
 searchPosts()
 
 function filterData(searchItem) {
+  
   listItems.forEach((item) => {
+    
     if (item.innerText.includes(searchItem)) {
-      item.classList.remove("hide");
-      searchResult.style = "display: block;"
+      item.classList.add("show");
+     
     } else {
-      item.classList.add("hide");
-      searchResult.style = "display: none;"
+      item.classList.remove("show");
+     
+    }
+    if (searchInput.value == "") {
+      item.classList.remove("show");
     }
   });
   
@@ -91,3 +95,13 @@ searchInput.addEventListener("input", function (event) {
   filterData(event.target.value);
  
 });
+
+// scroll top
+const scrolTop = document.getElementById("scrolTop");
+
+scrolTop.addEventListener("click", () =>{
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  })
+})

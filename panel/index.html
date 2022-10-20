@@ -50,7 +50,7 @@
                             <li><a href="#" class="nav-a">საქართველო</a></li>
                             <li><a href="#" class="nav-a">სამართალი</a></li>
                             <li><a href="#" class="nav-a">საზოგადოება</a></li>
-                            <li><a href="#" class="nav-a">სხვადასხვა</a></li>
+                            <li><a href="#" class="nav-a">რედაქტირება</a></li>
                         </ul>
                     </nav>
                     <div class="search-bar">
@@ -76,11 +76,24 @@
 
     <div class="container">
         <div class="panel-wrapper">
+            <h3 class="reg-title">რედაქტირება</h3>
+            <div class="add-posts"> 
+                <button class="addbtn" id="addBtn">დამატება</button>
+                <div class="addover" id="addover">
+                    <h3 class="reg-title">დამატება</h3>
+                    <form action="#" class="add-form" enctype="multipart/form-data" id="addForm">
+                        <input type="text" class="add-title" id="addTitle" placeholder="სათაური">
+                        <textarea class="add-content" id="addContent" placeholder="ტექსტი"></textarea>
+                        <!-- <input type="file" class="add-file" id="addFile" name="upfile" accept="image/jpeg, image/png, image/jpg"> -->
+                        <button type="submit" class="addbtn">დამატება</button>
+                    </form>
+                </div>
+            </div>
             <div class="panel-posts" id="panelPosts">
                 
 
             </div>
-            <div class="add-posts">
+            
 
             </div>
         </div>
@@ -105,7 +118,7 @@
     </footer>
 
     <script type="module" src="./js/panel.js"></script>
-    <!-- <script type="module" src="../js/app.js"></script> -->
+    <script type="module" src="../js/app.js"></script>
    
 </body>
 

@@ -1,34 +1,11 @@
-function getData(url, method) {
-  // let method = "";
-  return new Promise((resolve, reject) => {
-    fetch(url, {
-      method: method,
-    })
-      .then((response) => response.json())
-      .then((returnData) => {
-        if (returnData) {
-            console.log(returnData);
-          resolve(returnData);
-        } else {
-          throw `ERROR ${returnData.code}`;
-        }
-      })
+import { focusInput } from "../../js/module.js";
 
-      .catch((err) => reject(err));
-  });
-}
 
-function errMsg(info) {
-  const errInfo = document.getElementById("info");
-  const p = document.createElement("p");
-  p.textContent = info;
-  p.classList.add("error");
-  errInfo.appendChild(p);
-}
-
-getData("https://giga-madzgharashvili.github.io/json/news.json", "GET").then((response) => {
-  response.data.forEach((element) => {
-    // console.log(element);
+fetch("https://newsfakedata.herokuapp.com/posts")
+.then((response) => response.json())
+.then((response) => {
+  response.forEach((element) => {
+   
     createPost(element);
   });
 });
@@ -53,9 +30,60 @@ function createPost(event) {
 
   deletePost.addEventListener("click", (event) => {
     let id = event.target.getAttribute("data-id");
-    console.log(id);
-    fetch("https://giga-madzgharashvili.github.io/json/news.jsonson/" + id, {
+    
+    fetch(`https://newsfakedata.herokuapp.com/posts/${id}`, {
       method: "DELETE",
     });
+    setTimeout(() => {
+      window.location.reload();
+    }, 1000);
+   
+    
   });
 }
+// add posts
+
+const addBtn = document.getElementById("addBtn");
+const addover = document.getElementById("addover");
+const addForm = document.getElementById("addForm");
+
+
+addBtn.addEventListener("click",  () => {
+  addover.classList.add("addactive");
+});
+
+
+addForm.addEventListener("submit", (event) =>{
+  event.preventDefault();
+ 
+  const sendData = {
+    title: event.target[0].value,
+    // კონსოლში აგდებს შეცდომას ამის გარეშე და ამიტომ გავატანე იმიჯი. ფაილის ატვირთვა ვერ გავაკეთე :(
+    image: event.target[2].value,
+    content: event.target[1].value
+  }
+
+  fetch('https://newsfakedata.herokuapp.com/posts/', {
+  method: 'POST',
+  body: JSON.stringify(sendData),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then(() => {
+    setTimeout(() => {
+      addover.classList.remove("addactive");
+      window.location.reload();
+    }, 1000);
+  });
+
+})
+
+
+const input = document.getElementById("addTitle");
+const addContent = document.getElementById("addContent")
+  input.addEventListener("focus", focusInput(input));
+  addContent.addEventListener("focus", focusInput(addContent));
+
+

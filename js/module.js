@@ -1,12 +1,12 @@
-export function getData(url, callback) {
-    let method = "GET";
+export function getData(url, method) {
+    // let method = "GET";
     return new Promise((resolve, reject) => {
     fetch(url, {
         method: method
     })
     .then(response => response.json())
     .then(returnData =>{
-     if(returnData.code ===200){
+     if(returnData.code === 200){
          resolve(returnData)
      } else{
          throw `ERROR ${returnData.code}`
@@ -26,3 +26,17 @@ export function errMsg(info){
     errInfo.appendChild(p);
 }
 
+export function focusInput(event) {
+    event.addEventListener("focusin", onfocusFunction);
+    event.addEventListener("focusout", offFocusFunction);
+  
+    function onfocusFunction() {
+      event.style.background = "#0d111c";
+      event.style.border = "2px solid #645e5e";
+    }
+  
+    function offFocusFunction() {
+      event.style.background = "";
+      event.style.border = "";
+    }
+  }
