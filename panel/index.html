@@ -7,7 +7,7 @@
     <title>კონტაქტი</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="icon" href="../img/icon/fav.svg">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/font.css">
@@ -50,7 +50,7 @@
                             <li><a href="#" class="nav-a">საქართველო</a></li>
                             <li><a href="#" class="nav-a">სამართალი</a></li>
                             <li><a href="#" class="nav-a">საზოგადოება</a></li>
-                            <li><a href="#" class="nav-a">რედაქტირება</a></li>
+                            <li><a href="#" class="nav-a nav-active">რედაქტირება</a></li>
                         </ul>
                     </nav>
                     <div class="search-bar">
@@ -77,7 +77,7 @@
     <div class="container">
         <div class="panel-wrapper">
             <h3 class="reg-title">რედაქტირება</h3>
-            <div class="add-posts"> 
+            <div class="add-posts">
                 <button class="addbtn" id="addBtn">დამატება</button>
                 <div class="addover" id="addover">
                     <h3 class="reg-title">დამატება</h3>
@@ -89,18 +89,15 @@
                     </form>
                 </div>
             </div>
-            <div class="panel-posts" id="panelPosts">
-                
+            <div class="panel-posts" id="panelPosts"></div>
 
-            </div>
-            
 
-            </div>
+
         </div>
     </div>
 
     <footer>
-        
+
         <div class="min-footer">
             <div class="container">
                 <div class="min-footer-wrapper">
@@ -114,12 +111,13 @@
                     </div>
                 </div>
             </div>
+            <i class="fa-solid fa-angles-up" id="scrolTop"></i>
         </div>
     </footer>
 
     <script type="module" src="./js/panel.js"></script>
     <script type="module" src="../js/app.js"></script>
-   
+
 </body>
 
 </html>

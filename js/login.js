@@ -21,7 +21,7 @@ loginFOrm.addEventListener("submit", (event) => {
     errors.loginPassword = "პაროლი არ უნდა იყოს 8 სიმბოლოზე ნაკლები";
   }
 
-  console.log(errors);
+
 
   form.querySelectorAll(".error-text").forEach((element) => {
     element.innerText = "";
