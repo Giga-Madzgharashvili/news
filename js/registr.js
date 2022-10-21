@@ -1,3 +1,4 @@
+import { focusInput } from "../js/module.js";
 const registrForm = document.getElementById("registrForm");
 registrForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -79,17 +80,6 @@ togglrIcon.addEventListener("click", () => {
 
 let input = document.querySelectorAll(".users");
 input.forEach((element) => {
-    element.addEventListener("focusin", onfocusFunction);
-    element.addEventListener("focusout", offFocusFunction);
-
-function onfocusFunction() {
-    element.style.background = "#0d111c";
-    element.style.border = "2px solid #645e5e";
-}
-
-function offFocusFunction() {
-    element.style.background = "";
-    element.style.border = "";
-}
+focusInput(element);
 
 })

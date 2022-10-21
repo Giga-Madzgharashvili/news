@@ -7,7 +7,7 @@
     <title>კონტაქტი</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="icon" href="img/icon/fav.svg">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/font.css">
@@ -73,7 +73,47 @@
         </div>
     </header>
 
-    
+    <section>
+        <div class="container">
+            <div class="contact">
+                <h3 class="reg-title">კონტაქტი</h3>
+                <div class="contact-wrapper">
+                    <div class="cont-left">
+                        <div class="cont"><i class="fa-solid fa-phone cont-icon"><span>ტელეფონი</span></i>
+                            <p><a href="tel:0322123321">0322 123 321</a></p>
+                        </div>
+                        <div class="cont"><i class="fa-regular fa-envelope cont-icon"> <span>ელ ფოსტა</span></i>
+                            <p><a href="mailto:example@examle.com">example@examle.com</a></p>
+                        </div>
+                        <div class="cont"><i class="fa-regular fa-clock cont-icon"><span>სამუშაო საათები</span></i>
+                            <p>09:00 - 21:00</p>
+                        </div>
+                        <div class="cont"><i class="fa-solid fa-location-dot cont-icon"><span>მისამართი</span></i>
+                            <p>თბილისი, 0162, ჭავჭავაძის გამზ. #74</p>
+                        </div>
+                    </div>
+                    <div class="cont-right">
+                        <div class="cont-form-wrapper">
+                            <h3 class="cont-title">დაგვიკავშირდით</h3>
+                            <form action="#">
+                                <div class="cont-right-wrapper">
+                                <input type="text" class="contact-input cont-in" placeholder="სახელი">
+                                <input type="email" class="contact-input cont-in" placeholder="ელ ფოსტა">
+                                <input type="tel" class="contact-input cont-in" placeholder="ტელეფონი">
+                                <input type="text" class="contact-input cont-in" placeholder="სათაური">
+                                
+                                <textarea name="" id="" class="contact-text cont-in" placeholder="ტექსტი"></textarea>
+                            
+                                <button type="submit" class="cont-btn">გაგზავნა</button>
+                            </div>
+                            </form>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="footer">
@@ -145,6 +185,7 @@
 
 
     <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/contact.js"></script>
     <script type="module" src="js/footer.js"></script>
 </body>
 

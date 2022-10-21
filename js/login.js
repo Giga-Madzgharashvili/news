@@ -1,3 +1,4 @@
+import { focusInput } from "../js/module.js";
 const loginFOrm = document.getElementById("loginFOrm");
 
 loginFOrm.addEventListener("submit", (event) => {
@@ -75,16 +76,5 @@ togglrIcon.addEventListener("click", () => {
 
 let input = document.querySelectorAll(".users");
 input.forEach((element) => {
-  element.addEventListener("focusin", onfocusFunction);
-  element.addEventListener("focusout", offFocusFunction);
-
-  function onfocusFunction() {
-    element.style.background = "#0d111c";
-    element.style.border = "2px solid #645e5e";
-  }
-
-  function offFocusFunction() {
-    element.style.background = "";
-    element.style.border = "";
-  }
+ focusInput(element);
 });
