@@ -42,7 +42,7 @@ searchIcon.addEventListener("click", () => {
 
 
 function searchPosts(){
-getData("/db/news.json")
+getData("./db/news.json")
   .then((response) => {
     response.data.forEach((element) => {
       const li = document.createElement("li");
