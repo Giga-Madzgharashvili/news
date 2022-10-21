@@ -51,9 +51,10 @@ registrForm.addEventListener("submit", (event) => {
 
   for (let item in errors) {
     let formsErrors = document.getElementById("errors_" + item);
-
+   
     if (formsErrors) {
       formsErrors.textContent = errors[item];
+     
     }
   }
   if (Object.keys(errors).length == 0) {

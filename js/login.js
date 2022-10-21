@@ -33,6 +33,7 @@ loginFOrm.addEventListener("submit", (event) => {
 
     if (formsErrors) {
       formsErrors.textContent = errors[item];
+      
     }
   }
 
