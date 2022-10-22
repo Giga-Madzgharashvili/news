@@ -24,6 +24,7 @@
 .panel-content{
     max-width: 390px;
     width: 100%;
+    height: 445px;
     position: relative;
    
 }
@@ -36,7 +37,7 @@
 }
 .delete{
     position: absolute;
-    bottom: 116px;
+    bottom: 190px;
     right: 20px;
     font-size: 30px;
     font-weight: 900;
