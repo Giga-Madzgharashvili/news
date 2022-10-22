@@ -95,18 +95,36 @@
                     <div class="cont-right">
                         <div class="cont-form-wrapper">
                             <h3 class="cont-title">დაგვიკავშირდით</h3>
-
-                            <div class="cont-right-wrapper">
-                                <form action="#" id="contactForm">
-                                    <input type="text" class="contact-input cont-in" placeholder="სახელი">
-                                    <input type="email" class="contact-input cont-in" placeholder="ელ ფოსტა">
-                                    <input type="tel" class="contact-input cont-in" placeholder="ტელეფონი">
-                                    <input type="text" class="contact-input cont-in" placeholder="სათაური">
-                                    <textarea class="contact-text cont-in" placeholder="ტექსტი"></textarea>
+                            <form action="#" id="contactForm">
+                                <div class="cont-right-wrapper">
+                                    <div class="cont-item">
+                                        <input type="text" name="names" id="names" placeholder="სახელი"
+                                            class="contact-input cont-in">
+                                        <span class="error-text" id="errors_names"></span>
+                                    </div>
+                                    <div class="cont-item">
+                                        <input type="text" name="email" id="email" placeholder="ელ ფოსტა"
+                                            class="contact-input cont-in">
+                                        <span class="error-text" id="errors_email"></span>
+                                    </div>
+                                    <div class="cont-item">
+                                        <input type="tel" name="phone" id="phone" placeholder="ტელეფონი"
+                                            class="contact-input cont-in">
+                                        <p class="error-text" id="errors_phone"></p>
+                                    </div>
+                                    <div class="cont-item">
+                                        <input type="text" name="userName" id="subject" placeholder="სათაური"
+                                            class="contact-input cont-in">
+                                        <p class="error-text" id="errors_subject"></p>
+                                    </div>
+                                    <div class="cont-item-text">
+                                        <textarea class="contact-text cont-in" id="contText" name="contText"
+                                            placeholder="ტექსტი"></textarea>
+                                        <p class="error-text" id="errors_contText"></p>
+                                    </div>
                                     <button type="submit" class="cont-btn">გაგზავნა</button>
-                                </form>
-                            </div>
-
+                                </div>
+                            </form>
 
                         </div>
                     </div>

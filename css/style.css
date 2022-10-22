@@ -1042,7 +1042,7 @@ a {
     justify-content: space-between;
   }
   .contact-input{
-    max-width: 350px;
+    /* max-width: 350px; */
     width: 100%;
     height: 56px;
     margin-bottom: 30px;
@@ -1053,7 +1053,7 @@ a {
     color: var(--white);
   }
   .contact-text{
-    max-width: 730px;
+    /* max-width: 730px; */
     width: 100%;
     height: 132px;
     resize: none;
@@ -1071,4 +1071,11 @@ a {
     cursor: pointer;
     
   }
- 
+.cont-item{
+    max-width: 350px;
+    width: 100%;
+}
+.cont-item-text{
+    max-width: 730px;
+    width: 100%;
+}
